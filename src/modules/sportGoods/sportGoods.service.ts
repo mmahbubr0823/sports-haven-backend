@@ -18,7 +18,11 @@ const getSingleSportProduct = async (id: any) => {
 };
 // update a product
 const updateSportProduct = async (id: any) => {
-  const result = await Sports.findOneAndUpdate({ _id: id });
+  const result = await Sports.findOneAndUpdate({ id });
+  return result;
+};
+const deleteSportProduct = async (id: any) => {
+  const result = await Sports.findOneAndDelete({ id });
   return result;
 };
 
@@ -27,4 +31,5 @@ export const sportServices = {
   getAllSportProducts,
   getSingleSportProduct,
   updateSportProduct,
+  deleteSportProduct,
 };

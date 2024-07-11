@@ -12,5 +12,7 @@ router.post(
 );
 router.get("/all-products", sportProductController.getAllSportProduct);
 router.get("/single-product/:id", sportProductController.getSingleSportProduct);
+router.put("/update-product/:id", sportProductController.updateSportProduct);
+router.delete("/delete-product/:id", sportProductController.deleteSportProduct);
 
 export const sportProductRoutes = router;

@@ -13,7 +13,7 @@ app.use(cors());
 
 // routes
 app.use('/api/sports-products', sportProductRoutes);
-app.use('/api/sports-products', cartRoutes);
+app.use('/api/cart', cartRoutes);
 // app.use('/api/orders', orderRoutes);
 
 app.get("/", (req: Request, res: Response) => {
